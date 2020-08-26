@@ -2,8 +2,7 @@ package com.example.enparadigmassignment
 
 import android.content.Context
 import androidx.multidex.MultiDex
-import com.example.assignmentproject.di.component.DaggerApplicationComponent
-import com.squareup.leakcanary.LeakCanary
+import com.example.enparadigmassignment.di.component.DaggerApplicationComponent
 import dagger.android.AndroidInjector
 import dagger.android.support.DaggerApplication
 import timber.log.Timber

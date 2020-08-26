@@ -61,7 +61,7 @@ abstract class BaseActivity<D : ViewDataBinding, V : BaseActivityViewModel> : Ap
     }
 
     @CallSuper
-    protected fun onViewModelCreated() {
+    protected open fun onViewModelCreated() {
 
     }
 
