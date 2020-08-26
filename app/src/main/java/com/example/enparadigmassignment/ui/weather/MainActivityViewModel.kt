@@ -3,7 +3,6 @@ package com.example.enparadigmassignment.ui.weather
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.example.enparadigmassignment.common.extension.request
-import com.example.enparadigmassignment.common.widget.ListLiveData
 import com.example.enparadigmassignment.data.model.DailyItem
 import com.example.enparadigmassignment.data.repository.MainRepository
 import com.example.enparadigmassignment.data.response.Response
