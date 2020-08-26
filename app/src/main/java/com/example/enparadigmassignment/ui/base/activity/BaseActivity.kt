@@ -50,7 +50,7 @@ abstract class BaseActivity<D : ViewDataBinding, V : BaseActivityViewModel> : Ap
         //create data binding layout and set view model
         binding = DataBindingUtil.setContentView(this, layoutViewRes)
         binding.lifecycleOwner = this
-//        binding.setVariable(BR.viewModel,viewModel)
+        binding.setVariable(BR.viewModel,viewModel)
         onViewCreated()
     }
 

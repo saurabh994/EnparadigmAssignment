@@ -1,10 +1,13 @@
 package com.example.enparadigmassignment.data.model
 
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 import com.google.gson.annotations.SerializedName
 import java.io.Serializable
 import java.text.SimpleDateFormat
 import java.util.*
 
+@Entity
 data class DailyItem(
 
     @field:SerializedName("rain")
@@ -28,6 +31,7 @@ data class DailyItem(
     @field:SerializedName("feels_like")
     val feelsLike: FeelsLike? = null,
 
+    @PrimaryKey(autoGenerate = true)
     @field:SerializedName("dt")
     val dt: Long? = null,
 
@@ -44,7 +48,7 @@ data class DailyItem(
     val sunset: Int? = null,
 
     @field:SerializedName("weather")
-    val weather: List<WeatherItem?>? = null,
+    val weather: List<WeatherItem>? = null,
 
     @field:SerializedName("humidity")
     val humidity: Int? = null,
@@ -53,7 +57,7 @@ data class DailyItem(
     val windSpeed: Double? = null
 ):Serializable{
     fun getDay() : String{
-        val sdf = SimpleDateFormat("EEEE",Locale.getDefault())
+        val sdf = SimpleDateFormat("MM-dd-YYYY",Locale.getDefault())
         val dateFormat = dt?.times(1000)?.let { Date(it) }
         return sdf.format(dateFormat)
     }

@@ -1,6 +1,7 @@
 package com.example.enparadigmassignment.data.model
 
 import com.google.gson.annotations.SerializedName
+import java.io.Serializable
 
 data class Current(
 
@@ -45,4 +46,4 @@ data class Current(
 
     @field:SerializedName("wind_speed")
     val windSpeed: Double? = null
-)
+): Serializable

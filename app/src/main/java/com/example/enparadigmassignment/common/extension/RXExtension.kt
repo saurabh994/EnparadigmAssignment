@@ -18,7 +18,7 @@ inline fun <reified T> Single<T>.request(
 ): Disposable {
     return applyIoScheduler()
         .doOnSubscribe { onSubscribe() }
-//        .doOnTerminate { onTerminate() }
+        .doOnTerminate { onTerminate() }
         .subscribe({ next ->
            onSuccess(next)
         }, { error ->

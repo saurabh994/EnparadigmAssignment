@@ -1,6 +1,7 @@
 package com.example.enparadigmassignment.data.model
 
 import com.google.gson.annotations.SerializedName
+import java.io.Serializable
 
 data class Temp(
 
@@ -21,4 +22,4 @@ data class Temp(
 
     @SerializedName("morn")
     val morn: Double? = null
-)
+): Serializable

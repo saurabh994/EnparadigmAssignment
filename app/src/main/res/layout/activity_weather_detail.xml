@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+      <variable
+          name="viewModel"
+          type="com.example.enparadigmassignment.ui.weather.detail.MainActivityDetailViewModel" />
+    </data>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:padding="10dp"
+    android:background="@drawable/bg_weather_detail"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_width="match_parent"
+        android:id="@+id/tvWeather"
+        android:textSize="20sp"
+        android:fontFamily="@font/robotoslab_bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="#000"
+        android:text='@{"Weather - " + viewModel.weatherData.temp.day.toString() + "°C"}'
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:id="@+id/tvWind"
+        android:textSize="20sp"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/robotoslab_bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvWeather"
+        android:textColor="#000"
+        android:text='@{"Wind Speed - " + viewModel.weatherData.windSpeed + " " + "metre/sec"}'
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:id="@+id/tvPressure"
+        android:textSize="20sp"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/robotoslab_bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvWind"
+        android:textColor="#000"
+        android:text='@{"Pressure - " + viewModel.weatherData.pressure + " " + "hpa"}'
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:id="@+id/tvHumidity"
+        android:fontFamily="@font/robotoslab_bold"
+        android:textSize="20sp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvPressure"
+        android:textColor="#000"
+        android:text='@{"Humidity - " + viewModel.weatherData.humidity + "%"}'
+        android:layout_height="wrap_content"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
